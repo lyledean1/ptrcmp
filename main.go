@@ -51,7 +51,7 @@ func (v *PointerComparisonFinder) Visit(node ast.Node) ast.Visitor {
 func (v *PointerComparisonFinder) isPointerType(expr ast.Expr) bool {
 	switch t := expr.(type) {
 	case *ast.StarExpr:
-		return true
+		return false
 	case *ast.Ident:
 		if t.Obj != nil && t.Obj.Decl != nil {
 			if valueSpec, ok := t.Obj.Decl.(*ast.ValueSpec); ok {
