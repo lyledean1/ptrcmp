@@ -112,7 +112,7 @@ func (v *PointerComparisonFinder) isPointerType(expr ast.Expr) bool {
 	return false
 }
 
-func (v *PointerComparisonFinder) checkFile(path string, file *ast.File) error {
+func (v *PointerComparisonFinder) checkFile(_ string, file *ast.File) error {
 	files := []*ast.File{file}
 
 	conf := &types.Config{
